@@ -1,0 +1,81 @@
+from tkinter import *
+
+root=Tk()
+
+root.title('SmartShelf Dashboard')
+root.geometry('1270x670+0+0')
+root.resizable(0,0)
+root.config(bg='pink')
+
+bg_image=PhotoImage(file='img_1.png')
+titleLabel=Label(root,image=bg_image,compound=LEFT,text='  SmartShelf System')
+titleLabel.config(font=('Arial',40,'bold'),fg='white',bg='pink')
+titleLabel.place(x=0,y=0,relwidth=1)
+
+logoutButton=Button(root,text='Logout',font=('Arial',20,'bold'),fg='pink',bg='black')
+logoutButton.place(x=1100,y=10)
+
+subtitleLabel=Label(root,text='Welcome Admin\t\t Date: 11-09-2024\t\t Time: 12:30:00 PM', font=('Arial',20,'bold'),fg='white',bg='black')
+subtitleLabel.place(x=0,y=70,relwidth=1)
+
+leftFrame=Frame(root)
+leftFrame.place(x=0,y=102,width=200,height=555)
+
+logoImage=PhotoImage(file='logo.png')
+imageLabel=Label(leftFrame,image=logoImage)
+imageLabel.pack()
+
+menulabel=Label(leftFrame,text='Main Menu',font=('Arial',25,'bold'),fg='purple',bg='Grey')
+menulabel.pack(fill=X)
+
+employee_icon=PhotoImage(file='employee.png')
+employee_button=Button(leftFrame,image=employee_icon,compound=LEFT,text='  Employees',font=('Arial',20,'bold'),fg='purple',bg='black')
+employee_button.pack(fill=X)
+
+inventory_icon=PhotoImage(file='Supply.png')
+inventory_button=Button(leftFrame,image=inventory_icon,compound=LEFT,text='  Inventory  ',font=('Arial',20,'bold'),fg='purple',bg='black')
+inventory_button.pack(fill=X)
+
+
+sales_icon=PhotoImage(file='sales.png')
+sales_button=Button(leftFrame,image=sales_icon,compound=LEFT,text='  Sales         ',font=('Arial',20,'bold'),fg='purple',bg='black')
+sales_button.pack(fill=X)
+
+register_icon=PhotoImage(file='register.png')
+register_button=Button(leftFrame,image=register_icon,compound=LEFT,text='  Register     ',font=('Arial',20,'bold'),fg='purple',bg='black')
+register_button.pack(fill=X)
+
+exit_icon=PhotoImage(file='exit.png')
+exit_button=Button(leftFrame,image=exit_icon,compound=LEFT,text='  Exit             ',font=('Arial',20,'bold'),fg='purple',bg='black')
+exit_button.pack(fill=X)
+
+emp_frame=Frame(root,bg='beige',bd=4,relief=RIDGE)
+emp_frame.place(x=395,y=124,height=215,width=475)
+product_icon=PhotoImage(file='product.png')
+product_icon_Label=Label(emp_frame,image=employee_icon,bg='beige')
+product_icon_Label.pack()
+
+employees_icon_Label=Label(emp_frame,text='Current Employees',bg='beige',font=('Arial',22,'bold'),fg='purple')
+employees_icon_Label.pack()
+
+employees_count_Label=Label(emp_frame,text='3',bg='beige',font=('Arial',40,'bold'),fg='purple')
+employees_count_Label.pack()
+
+emp_frame=Frame(root,bg='beige',bd=4,relief=RIDGE)
+emp_frame.place(x=400,y=350,height=215,width=475)
+employees_icon=PhotoImage(file='product.png')
+employees_icon_Label=Label(emp_frame,image=employee_icon,bg='beige')
+employees_icon_Label.pack()
+
+suppliers_icon_Label=Label(emp_frame,text='Current Suppliers',bg='beige',font=('Arial',22,'bold'),fg='purple')
+suppliers_icon_Label.pack()
+suppliers_icon_Label=Label(emp_frame,text='3',bg='beige',font=('Arial',40,'bold'),fg='purple')
+
+emp_frame=Frame(root,bg='beige',bd=4,relief=RIDGE)
+emp_frame.place(x=600,y=850,height=215,width=475)
+employees_icon=PhotoImage(file='product.png')
+employees_icon_Label=Label(emp_frame,image=employee_icon,bg='beige')
+employees_icon_Label.pack()
+
+
+root.mainloop()
